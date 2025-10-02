@@ -25,4 +25,4 @@ We don't want to rely on the community to make the platform usable and want to e
 
 ## Getting started
 
-We recommend first taking a look at our [Data models](/docs/data-models).
+We recommend first taking a look at our [Data models](/docs/data-models) or checking out some general [terms](/docs/terms) related to Lyda.
