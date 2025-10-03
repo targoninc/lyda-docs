@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Lyda Docs',
   tagline: 'Music service, for everyone.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/128.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -35,19 +35,7 @@ const config: Config = {
     locales: ['en'],
   },
 
-  plugins: [
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          {
-            from: '/',
-            to: '/docs',
-          },
-        ],
-      },
-    ],
-  ],
+  plugins: [],
 
   presets: [
     [
@@ -104,7 +92,7 @@ const config: Config = {
           items: [
             {
               label: 'Docs',
-              to: '/docs/intro',
+              to: '/',
             },
           ],
         },
