@@ -1,0 +1,19 @@
+meta {
+  name: User Exists
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://api.lyda.app/user/exists?email={{email}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  email: {{email}}
+}
+
+settings {
+  encodeUrl: true
+}
