@@ -32,7 +32,7 @@ export interface Payout {
 | payout_batch_id | string | Yes | - |
 | user_id | number | Yes | - |
 | amount_ct | number | Yes | - |
-| status | [PaymentStatus](./PaymentStatus) | Yes | - |
+| status | [PaymentStatus](/api/data-models/Enums/PaymentStatus) | Yes | - |
 | created_at | D​a​t​e | Yes | - |
 | updated_at | D​a​t​e | Yes | - |
 

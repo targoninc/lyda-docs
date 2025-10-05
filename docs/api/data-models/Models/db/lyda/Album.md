@@ -42,8 +42,8 @@ export interface Album extends Entity {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| tracks | [AlbumTrack](./AlbumTrack)[] | No | - |
-| user | [User](./User) | No | - |
+| tracks | [AlbumTrack](/api/data-models/Models/db/lyda/AlbumTrack)[] | No | - |
+| user | [User](/api/data-models/Models/db/lyda/User) | No | - |
 | id | number | Yes | - |
 | user_id | number | Yes | - |
 | title | string | Yes | - |
@@ -56,4 +56,5 @@ export interface Album extends Entity {
 | secretcode | string | Yes | - |
 | has_cover | boolean | Yes | - |
 | price | number | Yes | - |
+| likes | [InteractionMetadata](/api/data-models/Models/InteractionMetadata)\<[TrackLike](/api/data-models/Models/db/lyda/TrackLike)\> | No | - |
 

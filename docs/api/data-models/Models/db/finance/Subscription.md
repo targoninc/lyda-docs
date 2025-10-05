@@ -38,7 +38,7 @@ export interface Subscription {
 | id | number | Yes | - |
 | user_id | number | Yes | - |
 | subscription_id | number | Yes | - |
-| status | [SubscriptionStatus](./SubscriptionStatus) | Yes | - |
+| status | [SubscriptionStatus](/api/data-models/Enums/SubscriptionStatus) | Yes | - |
 | created_at | D​a​t​e | Yes | - |
 | updated_at | D​a​t​e | Yes | - |
 | cancelled_at | D​a​t​e | Yes | - |

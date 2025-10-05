@@ -28,5 +28,5 @@ export interface PlaylistLike {
 | user_id | number | Yes | - |
 | playlist_id | number | Yes | - |
 | created_at | D​a​t​e | Yes | - |
-| user | [User](./User) | No | - |
+| user | [User](/api/data-models/Models/db/lyda/User) | No | - |
 

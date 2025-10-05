@@ -26,7 +26,7 @@ export interface Library {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| tracks | [Track](./Track)[] | Yes | - |
-| albums | [Album](./Album)[] | Yes | - |
-| playlists | [Playlist](./Playlist)[] | Yes | - |
+| tracks | [Track](/api/data-models/Models/db/lyda/Track)[] | Yes | - |
+| albums | [Album](/api/data-models/Models/db/lyda/Album)[] | Yes | - |
+| playlists | [Playlist](/api/data-models/Models/db/lyda/Playlist)[] | Yes | - |
 

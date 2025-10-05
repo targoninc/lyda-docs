@@ -25,7 +25,7 @@ export interface AlbumLike {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| user | [User](./User) | No | - |
+| user | [User](/api/data-models/Models/db/lyda/User) | No | - |
 | user_id | number | Yes | - |
 | album_id | number | Yes | - |
 | created_at | D​a​t​e | Yes | - |

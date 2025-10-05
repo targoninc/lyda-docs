@@ -24,5 +24,5 @@ export interface Likable {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| likes | ([TrackLike](./TrackLike) or [AlbumLike](./AlbumLike) or [PlaylistLike](./PlaylistLike))[] | No | - |
+| likes | ([TrackLike](/api/data-models/Models/db/lyda/TrackLike) or [AlbumLike](/api/data-models/Models/db/lyda/AlbumLike) or [PlaylistLike](/api/data-models/Models/db/lyda/PlaylistLike))[] | No | - |
 

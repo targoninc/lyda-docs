@@ -119,7 +119,7 @@ class ModelDocGenerator {
 
         // Add each structure (interface, enum, type)
         parsed.structures.forEach(structure => {
-            markdown += this.generateStructureMarkdown(structure, parsed.imports);
+            markdown += this.generateStructureMarkdown(structure, parsed.imports, relativePath);
         });
 
         return markdown;
@@ -195,13 +195,13 @@ class ModelDocGenerator {
                 const closeBrackets = (line.match(/}/g) || []).length;
                 bracketLevel += openBrackets - closeBrackets;
 
-                // Extract properties for interfaces (only simple ones to avoid MDX issues)
+                // Extract properties for interfaces
                 if (currentStructure.type === 'interface' && bracketLevel === 1) {
                     const propMatch = line.match(/^\s*(\w+)(\??):\s*([^{;]+);?\s*$/);
                     if (propMatch) {
                         const propType = propMatch[3].trim();
-                        // Only add simple types to avoid MDX parsing issues
-                        if (!propType.includes('{') && !propType.includes('<') && !propType.includes('>')) {
+                        // Skip properties with inline object types to avoid MDX parsing issues
+                        if (!propType.includes('{')) {
                             currentStructure.properties.push({
                                 name: propMatch[1],
                                 optional: propMatch[2] === '?',
@@ -232,7 +232,7 @@ class ModelDocGenerator {
     /**
      * Generate markdown for a parsed structure
      */
-    generateStructureMarkdown(structure, imports = []) {
+    generateStructureMarkdown(structure, imports = [], currentFilePath = '') {
         let markdown = `## ${structure.name}\n\n`;
 
         // Add TSDoc comment if available
@@ -270,7 +270,7 @@ class ModelDocGenerator {
                 // Process type - handle union types and create links for imported types
                 const safeType = prop.type
                     .split('|')
-                    .map(part => this.formatTypeWithLinks(part.trim(), imports))
+                    .map(part => this.formatTypeWithLinks(part.trim(), imports, currentFilePath))
                     .join(' or ');
             
                 markdown += `| ${prop.name} | ${safeType} | ${required} | ${description} |\n`;
@@ -285,7 +285,7 @@ class ModelDocGenerator {
     /**
      * Format a type with links to imported types
      */
-    formatTypeWithLinks(type, imports) {
+    formatTypeWithLinks(type, imports, currentFilePath = '') {
         // Extract all type names (handles Album, Album[], Album<T>, etc.)
         const typeNames = type.match(/[A-Z][a-zA-Z]*/g);
         
@@ -297,11 +297,12 @@ class ModelDocGenerator {
         
         // Process each type name found
         typeNames.forEach(typeName => {
-            // Check if this type is imported
-            if (this.isTypeImported(typeName, imports)) {
+            // Get the import path for this type
+            const importPath = this.getImportPathForType(typeName, imports, currentFilePath);
+            if (importPath) {
                 // Create a link to the type's documentation
                 const regex = new RegExp(`\\b${typeName}\\b`, 'g');
-                result = result.replace(regex, `[${typeName}](./${typeName})`);
+                result = result.replace(regex, `[${typeName}](${importPath})`);
             } else {
                 // Add zero-width space to break JSX component detection
                 const regex = new RegExp(`\\b${typeName}\\b`, 'g');
@@ -310,33 +311,94 @@ class ModelDocGenerator {
             }
         });
         
+        // Escape angle brackets to prevent MDX from interpreting them as JSX
+        result = result.replace(/</g, '\\<').replace(/>/g, '\\>');
+        
         return result;
     }
 
     /**
-     * Check if a type is imported
+     * Get the import path for a type, converted to a documentation link path
      */
-    isTypeImported(typeName, imports) {
-        return imports.some(imp => {
+    getImportPathForType(typeName, imports, currentFilePath = '') {
+        for (const imp of imports) {
             // Handle different import patterns
             // import {User} from "./User.js"
             // import {User, Album} from "./models.js"
             // import User from "./User.js"
-            const importMatch = imp.match(/import\s+(?:\{([^}]*)\}|(\w+))\s+from/);
+            const importMatch = imp.match(/import\s+(?:\{([^}]*)\}|(\w+))\s+from\s+["']([^"']+)["']/);
             if (importMatch) {
                 const namedImports = importMatch[1];
                 const defaultImport = importMatch[2];
+                const fromPath = importMatch[3];
                 
+                let hasType = false;
                 if (namedImports) {
                     // Check named imports
-                    return namedImports.split(',').some(name => name.trim() === typeName);
+                    hasType = namedImports.split(',').some(name => name.trim() === typeName);
                 } else if (defaultImport) {
                     // Check default import
-                    return defaultImport.trim() === typeName;
+                    hasType = defaultImport.trim() === typeName;
+                }
+                
+                if (hasType) {
+                    return this.convertImportPathToDocLink(fromPath, typeName, currentFilePath);
                 }
             }
-            return false;
-        });
+        }
+        return null;
+    }
+
+    /**
+     * Convert an import path to a documentation link path
+     */
+    convertImportPathToDocLink(importPath, typeName, currentFilePath) {
+        // Skip external packages
+        if (!importPath.startsWith('.')) {
+            return null;
+        }
+        
+        // Remove file extension
+        let cleanImportPath = importPath.replace(/\.(ts|js)$/, '');
+        
+        // Normalize current file path to use forward slashes
+        const normalizedCurrentPath = (currentFilePath || '').replace(/\\/g, '/');
+        const currentDir = normalizedCurrentPath.split('/').slice(0, -1).join('/');
+        
+        let targetDocPath;
+        
+        // Handle the case where the import is the exact type name (e.g., "./User" for User type)
+        if (cleanImportPath.endsWith(`/${typeName}`) || cleanImportPath === `./${typeName}`) {
+            // The import path already includes the type name, just resolve the path
+            targetDocPath = this.resolveRelativePath(currentDir, cleanImportPath);
+        } else {
+            // If the import path doesn't end with the type name, append it
+            const resolvedBasePath = this.resolveRelativePath(currentDir, cleanImportPath);
+            targetDocPath = `${resolvedBasePath}/${typeName}`;
+        }
+        
+        // Convert to absolute documentation URL
+        return `/api/data-models/${targetDocPath}`;
+    }
+
+    /**
+     * Resolve a relative path from a base directory
+     */
+    resolveRelativePath(baseDir, relativePath) {
+        const baseParts = baseDir.split('/').filter(part => part !== '');
+        const relativeParts = relativePath.split('/').filter(part => part !== '');
+        
+        const result = [...baseParts];
+        
+        for (const part of relativeParts) {
+            if (part === '..') {
+                result.pop();
+            } else if (part !== '.') {
+                result.push(part);
+            }
+        }
+        
+        return result.join('/');
     }
 
     /**

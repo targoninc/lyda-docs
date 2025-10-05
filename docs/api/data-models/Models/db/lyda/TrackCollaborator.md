@@ -33,9 +33,9 @@ export interface TrackCollaborator {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| collab_type | [CollaboratorType](./CollaboratorType) | No | - |
-| track | [Track](./Track) | No | - |
-| user | [User](./User) | No | - |
+| collab_type | [CollaboratorType](/api/data-models/Models/db/lyda/CollaboratorType) | No | - |
+| track | [Track](/api/data-models/Models/db/lyda/Track) | No | - |
+| user | [User](/api/data-models/Models/db/lyda/User) | No | - |
 | track_id | number | Yes | - |
 | user_id | number | Yes | - |
 | type | number | Yes | - |

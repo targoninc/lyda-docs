@@ -26,5 +26,5 @@ export interface ListTrack {
 |----------|------|----------|-------------|
 | track_id | number | Yes | - |
 | position | number | Yes | - |
-| track | [Track](./Track) | No | - |
+| track | [Track](/api/data-models/Models/db/lyda/Track) | No | - |
 

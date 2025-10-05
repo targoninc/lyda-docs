@@ -30,7 +30,7 @@ export interface PaypalBatchPayment {
 | id | number | Yes | - |
 | paypal_batch_id | string | Yes | - |
 | request_items_json | string | Yes | - |
-| paypal_batch_status | [PaypalBatchStatus](./PaypalBatchStatus) | Yes | - |
+| paypal_batch_status | [PaypalBatchStatus](/api/data-models/Enums/PaypalBatchStatus) | Yes | - |
 | created_at | D​a​t​e | Yes | - |
 | updated_at | D​a​t​e | Yes | - |
 

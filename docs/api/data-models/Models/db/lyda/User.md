@@ -62,20 +62,20 @@ export interface User extends Entity {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| permissions | [Permission](./Permission)[] | No | - |
-| subscription | [Subscription](./Subscription) | No | - |
-| settings | [Usersetting](./Usersetting)[] | No | - |
-| badges | [Badge](./Badge)[] | No | - |
-| userBadges | [UserBadge](./UserBadge)[] | No | - |
-| follows | [Follow](./Follow)[] | No | - |
-| following | [Follow](./Follow)[] | No | - |
-| totp | [UserTotp](./UserTotp)[] | No | - |
-| public_keys | [PublicKey](./PublicKey)[] | No | - |
-| giftedSubscriptions | [Subscription](./Subscription)[] | No | - |
+| permissions | [Permission](/api/data-models/Models/db/lyda/Permission)[] | No | - |
+| subscription | [Subscription](/api/data-models/Models/db/finance/Subscription) | No | - |
+| settings | [Usersetting](/api/data-models/Models/db/lyda/Usersetting)[] | No | - |
+| badges | [Badge](/api/data-models/Models/db/lyda/Badge)[] | No | - |
+| userBadges | [UserBadge](/api/data-models/Models/db/lyda/UserBadge)[] | No | - |
+| follows | [Follow](/api/data-models/Models/db/lyda/Follow)[] | No | - |
+| following | [Follow](/api/data-models/Models/db/lyda/Follow)[] | No | - |
+| totp | [UserTotp](/api/data-models/Models/db/lyda/UserTotp)[] | No | - |
+| public_keys | [PublicKey](/api/data-models/Models/db/lyda/PublicKey)[] | No | - |
+| giftedSubscriptions | [Subscription](/api/data-models/Models/db/finance/Subscription)[] | No | - |
 | id | number | Yes | - |
 | username | string | Yes | - |
 | mfa_enabled | boolean | Yes | - |
-| emails | [UserEmail](./UserEmail)[] | Yes | - |
+| emails | [UserEmail](/api/data-models/Models/db/lyda/UserEmail)[] | Yes | - |
 | password_hash | string | Yes | - |
 | displayname | string | Yes | - |
 | description | string | Yes | - |

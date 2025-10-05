@@ -42,8 +42,8 @@ export interface Playlist extends Entity {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| tracks | [PlaylistTrack](./PlaylistTrack)[] | No | - |
-| user | [User](./User) | No | - |
+| tracks | [PlaylistTrack](/api/data-models/Models/db/lyda/PlaylistTrack)[] | No | - |
+| user | [User](/api/data-models/Models/db/lyda/User) | No | - |
 | id | number | Yes | - |
 | user_id | number | Yes | - |
 | title | string | Yes | - |
@@ -53,4 +53,5 @@ export interface Playlist extends Entity {
 | visibility | string | Yes | - |
 | has_cover | boolean | Yes | - |
 | secretcode | string | Yes | - |
+| likes | [InteractionMetadata](/api/data-models/Models/InteractionMetadata)\<[TrackLike](/api/data-models/Models/db/lyda/TrackLike)\> | No | - |
 

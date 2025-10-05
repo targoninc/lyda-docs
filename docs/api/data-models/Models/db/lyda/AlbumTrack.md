@@ -27,7 +27,7 @@ export interface AlbumTrack {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| track | [Track](./Track) | No | - |
+| track | [Track](/api/data-models/Models/db/lyda/Track) | No | - |
 | album_id | number | Yes | - |
 | track_id | number | Yes | - |
 | user_id | number | Yes | - |

@@ -35,8 +35,8 @@ export interface Comment {
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | comments | C​o​m​m​e​n​t[] | No | - |
-| user | [User](./User) | No | - |
-| track | [Track](./Track) | No | - |
+| user | [User](/api/data-models/Models/db/lyda/User) | No | - |
+| track | [Track](/api/data-models/Models/db/lyda/Track) | No | - |
 | canEdit | boolean | No | - |
 | id | number | Yes | - |
 | parent_id | number | Yes | - |

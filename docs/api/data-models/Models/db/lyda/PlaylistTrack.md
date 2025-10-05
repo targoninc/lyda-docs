@@ -32,5 +32,5 @@ export interface PlaylistTrack {
 | user_id | number | Yes | - |
 | position | number | Yes | - |
 | created_at | D​a​t​e | Yes | - |
-| track | [Track](./Track) | No | - |
+| track | [Track](/api/data-models/Models/db/lyda/Track) | No | - |
 

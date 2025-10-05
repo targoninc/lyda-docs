@@ -63,12 +63,12 @@ export interface Track extends Entity {
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | repost_user_id | number | No | - |
-| repost | [Repost](./Repost) | No | - |
-| user | [User](./User) | No | - |
-| playlists | [Playlist](./Playlist)[] | No | - |
-| albums | [Album](./Album)[] | No | - |
-| notifications | [Notification](./Notification)[] | No | - |
-| collaborators | [TrackCollaborator](./TrackCollaborator)[] | No | - |
+| repost | [Repost](/api/data-models/Models/db/lyda/Repost) | No | - |
+| user | [User](/api/data-models/Models/db/lyda/User) | No | - |
+| playlists | [Playlist](/api/data-models/Models/db/lyda/Playlist)[] | No | - |
+| albums | [Album](/api/data-models/Models/db/lyda/Album)[] | No | - |
+| notifications | [Notification](/api/data-models/Models/db/lyda/Notification)[] | No | - |
+| collaborators | [TrackCollaborator](/api/data-models/Models/db/lyda/TrackCollaborator)[] | No | - |
 | user_id | number | Yes | - |
 | title | string | Yes | - |
 | isrc | string | Yes | - |
@@ -91,4 +91,7 @@ export interface Track extends Entity {
 | price | number | Yes | - |
 | has_cover | boolean | Yes | - |
 | processed | boolean | Yes | - |
+| likes | [InteractionMetadata](/api/data-models/Models/InteractionMetadata)\<[TrackLike](/api/data-models/Models/db/lyda/TrackLike)\> | No | - |
+| reposts | [InteractionMetadata](/api/data-models/Models/InteractionMetadata)\<[Repost](/api/data-models/Models/db/lyda/Repost)\> | No | - |
+| comments | [InteractionMetadata](/api/data-models/Models/InteractionMetadata)\<[Comment](/api/data-models/Models/db/lyda/Comment)\> | No | - |
 

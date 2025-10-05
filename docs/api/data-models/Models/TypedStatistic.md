@@ -24,6 +24,6 @@ export interface TypedStatistic {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| type | [ActivityTableName](./ActivityTableName), | Yes | - |
-| stats | [Statistic](./Statistic)[] | Yes | - |
+| type | [ActivityTableName](/api/data-models/Enums/ActivityTableName), | Yes | - |
+| stats | [Statistic](/api/data-models/Models/Statistic)[] | Yes | - |
 

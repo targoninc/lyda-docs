@@ -24,7 +24,7 @@ export interface NotificationReference {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| type | [NotificationReferenceType](./NotificationReferenceType) | Yes | - |
+| type | [NotificationReferenceType](/api/data-models/Enums/NotificationReferenceType) | Yes | - |
 | id | number | Yes | - |
 | object | any | No | - |
 

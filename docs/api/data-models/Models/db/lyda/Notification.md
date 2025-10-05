@@ -30,7 +30,7 @@ export interface Notification {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| references | [NotificationReference](./NotificationReference)[] | No | - |
+| references | [NotificationReference](/api/data-models/Models/NotificationReference)[] | No | - |
 | id | number | Yes | - |
 | user_id | number | Yes | - |
 | track_id | number | Yes | - |
