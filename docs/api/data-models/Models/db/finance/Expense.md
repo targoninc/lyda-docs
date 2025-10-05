@@ -22,11 +22,11 @@ export interface Expense {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `bigint` | Yes | - |
-| year | `number` | Yes | - |
-| month | `number` | Yes | - |
-| day | `number` | Yes | - |
-| amount_ct | `number` | Yes | - |
-| label | `string` | Yes | - |
-| expense_group | `string` | Yes | - |
+| id | bigint | Yes | - |
+| year | number | Yes | - |
+| month | number | Yes | - |
+| day | number | Yes | - |
+| amount_ct | number | Yes | - |
+| label | string | Yes | - |
+| expense_group | string | Yes | - |
 

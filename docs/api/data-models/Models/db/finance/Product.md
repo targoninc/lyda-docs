@@ -22,11 +22,11 @@ export interface Product {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| name | `string` | Yes | - |
-| description | `string` | Yes | - |
-| available | `boolean` | Yes | - |
-| image | `string` | Yes | - |
-| link | `string` | Yes | - |
-| url | `string` | Yes | - |
+| id | number | Yes | - |
+| name | string | Yes | - |
+| description | string | Yes | - |
+| available | boolean | Yes | - |
+| image | string | Yes | - |
+| link | string | Yes | - |
+| url | string | Yes | - |
 

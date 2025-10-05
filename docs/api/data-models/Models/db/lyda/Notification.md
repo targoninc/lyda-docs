@@ -30,13 +30,13 @@ export interface Notification {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| references | `N​o​t​i​f​i​c​a​t​i​o​n​R​e​f​e​r​e​n​c​e[]` | No | - |
-| id | `number` | Yes | - |
-| user_id | `number` | Yes | - |
-| track_id | `number` | Yes | - |
-| type | `string` | Yes | - |
-| search_key | `string` | Yes | - |
-| message | `string` | Yes | - |
-| is_read | `boolean` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
+| references | N​o​t​i​f​i​c​a​t​i​o​n​R​e​f​e​r​e​n​c​e[] | No | - |
+| id | number | Yes | - |
+| user_id | number | Yes | - |
+| track_id | number | Yes | - |
+| type | string | Yes | - |
+| search_key | string | Yes | - |
+| message | string | Yes | - |
+| is_read | boolean | Yes | - |
+| created_at | D​a​t​e | Yes | - |
 

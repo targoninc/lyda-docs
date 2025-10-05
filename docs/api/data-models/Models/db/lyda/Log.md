@@ -23,12 +23,12 @@ export interface Log {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| correlation_id | `string` | Yes | - |
-| time | `string` | Yes | - |
-| host | `string` | Yes | - |
-| stack | `string` | Yes | - |
-| logLevel | `number` | Yes | - |
-| message | `string` | Yes | - |
-| properties | `string` | Yes | - |
+| id | number | Yes | - |
+| correlation_id | string | Yes | - |
+| time | string | Yes | - |
+| host | string | Yes | - |
+| stack | string | Yes | - |
+| logLevel | number | Yes | - |
+| message | string | Yes | - |
+| properties | string | Yes | - |
 

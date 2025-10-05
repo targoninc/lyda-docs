@@ -18,7 +18,7 @@ export interface UserBadge {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| user_id | `number` | Yes | - |
-| badge_id | `number` | Yes | - |
-| given_at | `D​a​t​e` | Yes | - |
+| user_id | number | Yes | - |
+| badge_id | number | Yes | - |
+| given_at | D​a​t​e | Yes | - |
 

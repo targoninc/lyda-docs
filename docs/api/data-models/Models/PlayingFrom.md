@@ -26,8 +26,8 @@ export interface PlayingFrom {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| type | `"album" \| "playlist" \| string` | Yes | - |
-| name | `string` | Yes | - |
-| id | `number` | Yes | - |
-| entity | `A​l​b​u​m \| P​l​a​y​l​i​s​t` | No | - |
+| type | "album" or "playlist" or string | Yes | - |
+| name | string | Yes | - |
+| id | number | Yes | - |
+| entity | A​l​b​u​m or P​l​a​y​l​i​s​t | No | - |
 

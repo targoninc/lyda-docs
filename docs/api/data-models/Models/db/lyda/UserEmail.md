@@ -21,10 +21,10 @@ export interface UserEmail {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| user_id | `number` | Yes | - |
-| email | `string` | Yes | - |
-| primary | `boolean` | Yes | - |
-| verification_code | `string` | Yes | - |
-| verified | `boolean` | Yes | - |
-| verified_at | `D​a​t​e \| null` | Yes | - |
+| user_id | number | Yes | - |
+| email | string | Yes | - |
+| primary | boolean | Yes | - |
+| verification_code | string | Yes | - |
+| verified | boolean | Yes | - |
+| verified_at | D​a​t​e or null | Yes | - |
 

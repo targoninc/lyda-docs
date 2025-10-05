@@ -23,12 +23,12 @@ export interface RoyaltyMonth {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| month | `number` | Yes | - |
-| year | `number` | Yes | - |
-| hasEarnings | `boolean` | Yes | - |
-| earnings | `number` | Yes | - |
-| artistRoyalties | `number` | Yes | - |
-| trackRoyalties | `number` | Yes | - |
-| calculated | `boolean` | Yes | - |
-| approved | `boolean` | Yes | - |
+| month | number | Yes | - |
+| year | number | Yes | - |
+| hasEarnings | boolean | Yes | - |
+| earnings | number | Yes | - |
+| artistRoyalties | number | Yes | - |
+| trackRoyalties | number | Yes | - |
+| calculated | boolean | Yes | - |
+| approved | boolean | Yes | - |
 

@@ -20,9 +20,9 @@ export interface MonthlyEarning {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| generated_at | `D​a​t​e` | Yes | - |
-| month | `string` | Yes | - |
-| amount | `number` | Yes | - |
-| product_id | `number` | Yes | - |
+| id | number | Yes | - |
+| generated_at | D​a​t​e | Yes | - |
+| month | string | Yes | - |
+| amount | number | Yes | - |
+| product_id | number | Yes | - |
 

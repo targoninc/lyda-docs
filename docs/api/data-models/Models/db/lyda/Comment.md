@@ -34,16 +34,16 @@ export interface Comment {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| comments | `C​o​m​m​e​n​t[]` | No | - |
-| user | `U​s​e​r` | No | - |
-| track | `T​r​a​c​k` | No | - |
-| canEdit | `boolean` | No | - |
-| id | `number` | Yes | - |
-| parent_id | `number` | Yes | - |
-| track_id | `number` | Yes | - |
-| user_id | `number` | Yes | - |
-| content | `string` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
-| potentially_harmful | `boolean` | Yes | - |
-| hidden | `boolean` | Yes | - |
+| comments | C​o​m​m​e​n​t[] | No | - |
+| user | U​s​e​r | No | - |
+| track | T​r​a​c​k | No | - |
+| canEdit | boolean | No | - |
+| id | number | Yes | - |
+| parent_id | number | Yes | - |
+| track_id | number | Yes | - |
+| user_id | number | Yes | - |
+| content | string | Yes | - |
+| created_at | D​a​t​e | Yes | - |
+| potentially_harmful | boolean | Yes | - |
+| hidden | boolean | Yes | - |
 

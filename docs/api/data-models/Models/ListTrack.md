@@ -24,7 +24,7 @@ export interface ListTrack {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| track_id | `number` | Yes | - |
-| position | `number` | Yes | - |
-| track | `T​r​a​c​k` | No | - |
+| track_id | number | Yes | - |
+| position | number | Yes | - |
+| track | T​r​a​c​k | No | - |
 

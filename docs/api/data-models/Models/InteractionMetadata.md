@@ -18,7 +18,7 @@ export interface InteractionMetadata<T> {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| count | `number` | No | - |
-| interacted | `boolean` | No | - |
-| list | `T[]` | No | - |
+| count | number | No | - |
+| interacted | boolean | No | - |
+| list | T[] | No | - |
 

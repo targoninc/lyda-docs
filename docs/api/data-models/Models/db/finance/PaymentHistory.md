@@ -27,16 +27,16 @@ export interface PaymentHistory {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| received_at | `D​a​t​e` | Yes | - |
-| user_id | `number` | Yes | - |
-| product_id | `number` | Yes | - |
-| subscription_id | `number` | Yes | - |
-| currency | `string` | Yes | - |
-| payment_processor | `string` | Yes | - |
-| external_id | `string` | Yes | - |
-| total | `number` | Yes | - |
-| fees | `number` | Yes | - |
-| received | `number` | Yes | - |
-| succeeded | `boolean` | Yes | - |
+| id | number | Yes | - |
+| received_at | D​a​t​e | Yes | - |
+| user_id | number | Yes | - |
+| product_id | number | Yes | - |
+| subscription_id | number | Yes | - |
+| currency | string | Yes | - |
+| payment_processor | string | Yes | - |
+| external_id | string | Yes | - |
+| total | number | Yes | - |
+| fees | number | Yes | - |
+| received | number | Yes | - |
+| succeeded | boolean | Yes | - |
 

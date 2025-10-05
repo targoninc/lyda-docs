@@ -22,11 +22,11 @@ export interface UserTotp {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| user_id | `number` | Yes | - |
-| secret | `string` | Yes | - |
-| verified | `boolean` | Yes | - |
-| name | `string` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
-| updated_at | `D​a​t​e` | Yes | - |
+| id | number | Yes | - |
+| user_id | number | Yes | - |
+| secret | string | Yes | - |
+| verified | boolean | Yes | - |
+| name | string | Yes | - |
+| created_at | D​a​t​e | Yes | - |
+| updated_at | D​a​t​e | Yes | - |
 

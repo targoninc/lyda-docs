@@ -23,12 +23,12 @@ export interface AvailableSubscription {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| product_id | `number` | Yes | - |
-| name | `string` | Yes | - |
-| description | `string` | Yes | - |
-| service | `string` | Yes | - |
-| plan_id | `string` | Yes | - |
-| term_type | `string` | Yes | - |
-| price_per_term | `number` | Yes | - |
+| id | number | Yes | - |
+| product_id | number | Yes | - |
+| name | string | Yes | - |
+| description | string | Yes | - |
+| service | string | Yes | - |
+| plan_id | string | Yes | - |
+| term_type | string | Yes | - |
+| price_per_term | number | Yes | - |
 

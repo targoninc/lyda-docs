@@ -22,7 +22,7 @@ export interface InteractionConfig {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| toggleable | `boolean` | No | - |
-| requiredOptions | `string[]` | No | - |
-| optionalOptions | `string[]` | No | - |
+| toggleable | boolean | No | - |
+| requiredOptions | string[] | No | - |
+| optionalOptions | string[] | No | - |
 

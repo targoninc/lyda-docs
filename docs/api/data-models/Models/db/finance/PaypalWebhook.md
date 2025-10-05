@@ -22,11 +22,11 @@ export interface PaypalWebhook {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `string` | Yes | - |
-| type | `string` | Yes | - |
-| received_at | `D​a​t​e` | Yes | - |
-| content | `string` | Yes | - |
-| paypal_user_id | `string` | Yes | - |
-| handled | `boolean` | Yes | - |
-| updated_at | `D​a​t​e` | Yes | - |
+| id | string | Yes | - |
+| type | string | Yes | - |
+| received_at | D​a​t​e | Yes | - |
+| content | string | Yes | - |
+| paypal_user_id | string | Yes | - |
+| handled | boolean | Yes | - |
+| updated_at | D​a​t​e | Yes | - |
 

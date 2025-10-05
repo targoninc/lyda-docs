@@ -20,9 +20,9 @@ export interface PaypalUser {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| paypal_user_id | `string` | Yes | - |
-| user_id | `number` | Yes | - |
-| given_name | `string` | Yes | - |
-| surname | `string` | Yes | - |
-| email_address | `string` | Yes | - |
+| paypal_user_id | string | Yes | - |
+| user_id | number | Yes | - |
+| given_name | string | Yes | - |
+| surname | string | Yes | - |
+| email_address | string | Yes | - |
 

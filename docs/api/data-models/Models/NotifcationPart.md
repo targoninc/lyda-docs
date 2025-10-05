@@ -18,7 +18,7 @@ export interface NotificationPart {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| type | `string,` | Yes | - |
-| text | `string,` | No | - |
-| id | `number` | No | - |
+| type | string, | Yes | - |
+| text | string, | No | - |
+| id | number | No | - |
 

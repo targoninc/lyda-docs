@@ -18,7 +18,7 @@ export interface Badge {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| name | `string` | Yes | - |
-| description | `string` | Yes | - |
+| id | number | Yes | - |
+| name | string | Yes | - |
+| description | string | Yes | - |
 

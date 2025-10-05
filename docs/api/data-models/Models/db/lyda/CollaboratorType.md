@@ -20,9 +20,9 @@ export interface CollaboratorType {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| name | `string` | Yes | - |
-| description | `string` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
-| updated_at | `D​a​t​e` | Yes | - |
+| id | number | Yes | - |
+| name | string | Yes | - |
+| description | string | Yes | - |
+| created_at | D​a​t​e | Yes | - |
+| updated_at | D​a​t​e | Yes | - |
 

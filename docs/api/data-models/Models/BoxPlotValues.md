@@ -20,9 +20,9 @@ export interface BoxPlotValues {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| min | `number` | Yes | - |
-| q1 | `number` | Yes | - |
-| median | `number` | Yes | - |
-| q3 | `number` | Yes | - |
-| max | `number` | Yes | - |
+| min | number | Yes | - |
+| q1 | number | Yes | - |
+| median | number | Yes | - |
+| q3 | number | Yes | - |
+| max | number | Yes | - |
 

@@ -42,18 +42,18 @@ export interface Album extends Entity {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| tracks | `A​l​b​u​m​T​r​a​c​k[]` | No | - |
-| user | `U​s​e​r` | No | - |
-| id | `number` | Yes | - |
-| user_id | `number` | Yes | - |
-| title | `string` | Yes | - |
-| description | `string` | Yes | - |
-| upc | `string` | Yes | - |
-| release_date | `D​a​t​e` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
-| updated_at | `D​a​t​e` | Yes | - |
-| visibility | `string` | Yes | - |
-| secretcode | `string` | Yes | - |
-| has_cover | `boolean` | Yes | - |
-| price | `number` | Yes | - |
+| tracks | A​l​b​u​m​T​r​a​c​k[] | No | - |
+| user | U​s​e​r | No | - |
+| id | number | Yes | - |
+| user_id | number | Yes | - |
+| title | string | Yes | - |
+| description | string | Yes | - |
+| upc | string | Yes | - |
+| release_date | D​a​t​e | Yes | - |
+| created_at | D​a​t​e | Yes | - |
+| updated_at | D​a​t​e | Yes | - |
+| visibility | string | Yes | - |
+| secretcode | string | Yes | - |
+| has_cover | boolean | Yes | - |
+| price | number | Yes | - |
 

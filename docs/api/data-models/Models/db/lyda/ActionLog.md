@@ -21,10 +21,10 @@ export interface ActionLog {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| user_id | `number` | Yes | - |
-| action_name | `string` | Yes | - |
-| actioned_user_id | `number` | Yes | - |
-| additional_info | `string` | Yes | - |
-| created_at | `string` | Yes | - |
+| id | number | Yes | - |
+| user_id | number | Yes | - |
+| action_name | string | Yes | - |
+| actioned_user_id | number | Yes | - |
+| additional_info | string | Yes | - |
+| created_at | string | Yes | - |
 

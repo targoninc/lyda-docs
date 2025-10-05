@@ -24,7 +24,7 @@ export interface NotificationReference {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| type | `N​o​t​i​f​i​c​a​t​i​o​n​R​e​f​e​r​e​n​c​e​T​y​p​e` | Yes | - |
-| id | `number` | Yes | - |
-| object | `any` | No | - |
+| type | N​o​t​i​f​i​c​a​t​i​o​n​R​e​f​e​r​e​n​c​e​T​y​p​e | Yes | - |
+| id | number | Yes | - |
+| object | any | No | - |
 

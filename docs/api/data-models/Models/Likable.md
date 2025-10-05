@@ -24,5 +24,5 @@ export interface Likable {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| likes | `(T​r​a​c​k​L​i​k​e \| A​l​b​u​m​L​i​k​e \| P​l​a​y​l​i​s​t​L​i​k​e)[]` | No | - |
+| likes | (T​r​a​c​k​L​i​k​e or A​l​b​u​m​L​i​k​e or P​l​a​y​l​i​s​t​L​i​k​e)[] | No | - |
 

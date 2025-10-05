@@ -21,10 +21,10 @@ export interface BillingHistory {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| user_id | `number` | Yes | - |
-| product_id | `number` | Yes | - |
-| billing_type | `string` | Yes | - |
-| amount | `number` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
+| id | number | Yes | - |
+| user_id | number | Yes | - |
+| product_id | number | Yes | - |
+| billing_type | string | Yes | - |
+| amount | number | Yes | - |
+| created_at | D​a​t​e | Yes | - |
 

@@ -42,15 +42,15 @@ export interface Playlist extends Entity {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| tracks | `P​l​a​y​l​i​s​t​T​r​a​c​k[]` | No | - |
-| user | `U​s​e​r` | No | - |
-| id | `number` | Yes | - |
-| user_id | `number` | Yes | - |
-| title | `string` | Yes | - |
-| description | `string` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
-| updated_at | `D​a​t​e` | Yes | - |
-| visibility | `string` | Yes | - |
-| has_cover | `boolean` | Yes | - |
-| secretcode | `string` | Yes | - |
+| tracks | P​l​a​y​l​i​s​t​T​r​a​c​k[] | No | - |
+| user | U​s​e​r | No | - |
+| id | number | Yes | - |
+| user_id | number | Yes | - |
+| title | string | Yes | - |
+| description | string | Yes | - |
+| created_at | D​a​t​e | Yes | - |
+| updated_at | D​a​t​e | Yes | - |
+| visibility | string | Yes | - |
+| has_cover | boolean | Yes | - |
+| secretcode | string | Yes | - |
 

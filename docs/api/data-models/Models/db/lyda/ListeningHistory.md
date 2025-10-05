@@ -20,9 +20,9 @@ export interface ListeningHistory {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| user_id | `number` | Yes | - |
-| track_id | `number` | Yes | - |
-| quality | `string` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
+| id | number | Yes | - |
+| user_id | number | Yes | - |
+| track_id | number | Yes | - |
+| quality | string | Yes | - |
+| created_at | D​a​t​e | Yes | - |
 

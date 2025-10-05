@@ -33,14 +33,14 @@ export interface TrackCollaborator {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| collab_type | `C​o​l​l​a​b​o​r​a​t​o​r​T​y​p​e` | No | - |
-| track | `T​r​a​c​k` | No | - |
-| user | `U​s​e​r` | No | - |
-| track_id | `number` | Yes | - |
-| user_id | `number` | Yes | - |
-| type | `number` | Yes | - |
-| approved | `boolean` | Yes | - |
-| denied | `boolean` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
-| updated_at | `D​a​t​e` | Yes | - |
+| collab_type | C​o​l​l​a​b​o​r​a​t​o​r​T​y​p​e | No | - |
+| track | T​r​a​c​k | No | - |
+| user | U​s​e​r | No | - |
+| track_id | number | Yes | - |
+| user_id | number | Yes | - |
+| type | number | Yes | - |
+| approved | boolean | Yes | - |
+| denied | boolean | Yes | - |
+| created_at | D​a​t​e | Yes | - |
+| updated_at | D​a​t​e | Yes | - |
 

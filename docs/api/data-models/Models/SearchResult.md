@@ -22,11 +22,11 @@ export interface SearchResult {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `number` | Yes | - |
-| url | `string` | Yes | - |
-| exactMatch | `boolean` | Yes | - |
-| type | `string` | Yes | - |
-| display | `string` | Yes | - |
-| subtitle | `string` | No | - |
-| hasImage | `boolean` | No | - |
+| id | number | Yes | - |
+| url | string | Yes | - |
+| exactMatch | boolean | Yes | - |
+| type | string | Yes | - |
+| display | string | Yes | - |
+| subtitle | string | No | - |
+| hasImage | boolean | No | - |
 

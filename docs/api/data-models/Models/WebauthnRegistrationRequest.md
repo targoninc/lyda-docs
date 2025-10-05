@@ -32,6 +32,6 @@ export interface WebauthnRegistrationRequest {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| challenge | `string` | Yes | - |
-| name | `string` | Yes | - |
+| challenge | string | Yes | - |
+| name | string | Yes | - |
 

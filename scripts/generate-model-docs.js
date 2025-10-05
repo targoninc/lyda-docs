@@ -232,7 +232,7 @@ class ModelDocGenerator {
     /**
      * Generate markdown for a parsed structure
      */
-    generateStructureMarkdown(structure) {
+    generateStructureMarkdown(structure, imports = []) {
         let markdown = `## ${structure.name}\n\n`;
 
         // Add TSDoc comment if available
@@ -262,23 +262,55 @@ class ModelDocGenerator {
             markdown += '### Properties\n\n';
             markdown += '| Property | Type | Required | Description |\n';
             markdown += '|----------|------|----------|-------------|\n';
+            
             structure.properties.forEach(prop => {
                 const required = prop.optional ? 'No' : 'Yes';
-                // Escape type names to prevent MDX issues - handle union types and complex expressions
+                const description = prop.comment ? prop.comment.trim() : '-';
+                
+                // Process type - handle union types and create links for imported types
                 const safeType = prop.type
                     .split('|')
-                    .map(part => part.trim().replace(/([A-Z][a-zA-Z]*)/g, (match) => {
-                        // Add zero-width space to break JSX component detection
-                        return match.split('').join('\u200B');
-                    }))
-                    .join(' \\| ');
-                const description = prop.comment ? prop.comment.trim() : '-';
-                markdown += `| ${prop.name} | \`${safeType}\` | ${required} | ${description} |\n`;
+                    .map(part => this.formatTypeWithLinks(part.trim(), imports))
+                    .join(' or ');
+            
+                markdown += `| ${prop.name} | ${safeType} | ${required} | ${description} |\n`;
             });
+            
             markdown += '\n';
         }
 
         return markdown;
+    }
+
+    /**
+     * Format a type with links to imported types
+     */
+    formatTypeWithLinks(type, imports) {
+        // Extract all type names (handles Album, Album[], Album<T>, etc.)
+        const typeNames = type.match(/[A-Z][a-zA-Z]*/g);
+        
+        if (!typeNames) {
+            return type;
+        }
+        
+        let result = type;
+        
+        // Process each type name found
+        typeNames.forEach(typeName => {
+            // Check if this type is imported
+            if (imports.some(imp => imp.includes(typeName))) {
+                // Create a link to the type's documentation
+                const regex = new RegExp(`\\b${typeName}\\b`, 'g');
+                result = result.replace(regex, `[${typeName}](./${typeName})`);
+            } else {
+                // Add zero-width space to break JSX component detection
+                const regex = new RegExp(`\\b${typeName}\\b`, 'g');
+                const escaped = typeName.split('').join('\u200B');
+                result = result.replace(regex, escaped);
+            }
+        });
+        
+        return result;
     }
 
     /**

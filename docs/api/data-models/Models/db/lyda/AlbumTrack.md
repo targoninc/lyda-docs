@@ -27,10 +27,10 @@ export interface AlbumTrack {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| track | `T​r​a​c​k` | No | - |
-| album_id | `number` | Yes | - |
-| track_id | `number` | Yes | - |
-| user_id | `number` | Yes | - |
-| position | `number` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
+| track | T​r​a​c​k | No | - |
+| album_id | number | Yes | - |
+| track_id | number | Yes | - |
+| user_id | number | Yes | - |
+| position | number | Yes | - |
+| created_at | D​a​t​e | Yes | - |
 

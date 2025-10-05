@@ -25,8 +25,8 @@ export interface TrackLike {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| user | `U​s​e​r` | No | - |
-| user_id | `number` | Yes | - |
-| track_id | `number` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
+| user | U​s​e​r | No | - |
+| user_id | number | Yes | - |
+| track_id | number | Yes | - |
+| created_at | D​a​t​e | Yes | - |
 

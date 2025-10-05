@@ -18,7 +18,7 @@ export interface Follow {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| user_id | `number` | Yes | - |
-| following_user_id | `number` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
+| user_id | number | Yes | - |
+| following_user_id | number | Yes | - |
+| created_at | D​a​t​e | Yes | - |
 

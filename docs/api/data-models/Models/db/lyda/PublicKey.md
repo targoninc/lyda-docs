@@ -25,14 +25,14 @@ export interface PublicKey {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| id | `string` | Yes | - |
-| key_id | `string` | Yes | - |
-| public_key | `string` | Yes | - |
-| algorithm | `string` | Yes | - |
-| passkey_user_id | `string` | Yes | - |
-| backed_up | `boolean` | Yes | - |
-| name | `string` | Yes | - |
-| transports | `string` | Yes | - |
-| created_at | `D​a​t​e` | Yes | - |
-| updated_at | `D​a​t​e` | Yes | - |
+| id | string | Yes | - |
+| key_id | string | Yes | - |
+| public_key | string | Yes | - |
+| algorithm | string | Yes | - |
+| passkey_user_id | string | Yes | - |
+| backed_up | boolean | Yes | - |
+| name | string | Yes | - |
+| transports | string | Yes | - |
+| created_at | D​a​t​e | Yes | - |
+| updated_at | D​a​t​e | Yes | - |
 
