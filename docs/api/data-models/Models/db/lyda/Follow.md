@@ -16,7 +16,9 @@ export interface Follow {
 
 ### Properties
 
-- **user_id**: `number`
-- **following_user_id**: `number`
-- **created_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| user_id | `number` | Yes | - |
+| following_user_id | `number` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
 

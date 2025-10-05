@@ -16,7 +16,9 @@ export interface NotificationPart {
 
 ### Properties
 
-- **type**: `string,`
-- **text**: `string,` (optional)
-- **id**: `number` (optional)
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| type | `string,` | Yes | - |
+| text | `string,` | No | - |
+| id | `number` | No | - |
 

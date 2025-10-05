@@ -20,11 +20,13 @@ export interface UserTotp {
 
 ### Properties
 
-- **id**: `number`
-- **user_id**: `number`
-- **secret**: `string`
-- **verified**: `boolean`
-- **name**: `string`
-- **created_at**: `D​a​t​e`
-- **updated_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `number` | Yes | - |
+| user_id | `number` | Yes | - |
+| secret | `string` | Yes | - |
+| verified | `boolean` | Yes | - |
+| name | `string` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
+| updated_at | `D​a​t​e` | Yes | - |
 

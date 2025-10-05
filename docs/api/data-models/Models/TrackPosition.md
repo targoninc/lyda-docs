@@ -15,6 +15,8 @@ export interface TrackPosition {
 
 ### Properties
 
-- **relative**: `number`
-- **absolute**: `number`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| relative | `number` | Yes | - |
+| absolute | `number` | Yes | - |
 

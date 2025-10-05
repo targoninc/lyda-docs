@@ -23,8 +23,10 @@ export interface PlaylistLike {
 
 ### Properties
 
-- **user_id**: `number`
-- **playlist_id**: `number`
-- **created_at**: `D​a​t​e`
-- **user**: `U​s​e​r` (optional)
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| user_id | `number` | Yes | - |
+| playlist_id | `number` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
+| user | `U​s​e​r` | No | - |
 

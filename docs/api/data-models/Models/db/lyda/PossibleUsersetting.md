@@ -16,7 +16,9 @@ export interface PossibleUsersetting {
 
 ### Properties
 
-- **name**: `string`
-- **description**: `string`
-- **type**: `string`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| name | `string` | Yes | - |
+| description | `string` | Yes | - |
+| type | `string` | Yes | - |
 

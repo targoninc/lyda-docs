@@ -16,7 +16,9 @@ export interface InteractionMetadata<T> {
 
 ### Properties
 
-- **count**: `number` (optional)
-- **interacted**: `boolean` (optional)
-- **list**: `T[]` (optional)
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| count | `number` | No | - |
+| interacted | `boolean` | No | - |
+| list | `T[]` | No | - |
 

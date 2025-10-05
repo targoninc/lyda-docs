@@ -18,9 +18,11 @@ export interface CollaboratorType {
 
 ### Properties
 
-- **id**: `number`
-- **name**: `string`
-- **description**: `string`
-- **created_at**: `D​a​t​e`
-- **updated_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `number` | Yes | - |
+| name | `string` | Yes | - |
+| description | `string` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
+| updated_at | `D​a​t​e` | Yes | - |
 

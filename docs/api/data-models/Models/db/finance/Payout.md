@@ -26,11 +26,13 @@ export interface Payout {
 
 ### Properties
 
-- **id**: `number`
-- **payout_batch_id**: `string`
-- **user_id**: `number`
-- **amount_ct**: `number`
-- **status**: `P​a​y​m​e​n​t​S​t​a​t​u​s`
-- **created_at**: `D​a​t​e`
-- **updated_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `number` | Yes | - |
+| payout_batch_id | `string` | Yes | - |
+| user_id | `number` | Yes | - |
+| amount_ct | `number` | Yes | - |
+| status | `P​a​y​m​e​n​t​S​t​a​t​u​s` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
+| updated_at | `D​a​t​e` | Yes | - |
 

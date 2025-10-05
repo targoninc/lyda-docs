@@ -16,7 +16,9 @@ export interface UserPermission {
 
 ### Properties
 
-- **user_id**: `number`
-- **permission_id**: `number`
-- **created_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| user_id | `number` | Yes | - |
+| permission_id | `number` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
 

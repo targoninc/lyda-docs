@@ -20,7 +20,9 @@ export interface InteractionConfig {
 
 ### Properties
 
-- **toggleable**: `boolean` (optional)
-- **requiredOptions**: `string[]` (optional)
-- **optionalOptions**: `string[]` (optional)
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| toggleable | `boolean` | No | - |
+| requiredOptions | `string[]` | No | - |
+| optionalOptions | `string[]` | No | - |
 

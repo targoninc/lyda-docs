@@ -16,7 +16,9 @@ export interface Statistic {
 
 ### Properties
 
-- **id**: `any,`
-- **label**: `string,`
-- **value**: `number,`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `any,` | Yes | - |
+| label | `string,` | Yes | - |
+| value | `number,` | Yes | - |
 

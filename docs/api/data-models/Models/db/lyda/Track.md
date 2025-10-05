@@ -60,33 +60,35 @@ export interface Track extends Entity {
 
 ### Properties
 
-- **repost_user_id**: `number` (optional)
-- **repost**: `R​e​p​o​s​t` (optional)
-- **user**: `U​s​e​r` (optional)
-- **playlists**: `P​l​a​y​l​i​s​t[]` (optional)
-- **albums**: `A​l​b​u​m[]` (optional)
-- **notifications**: `N​o​t​i​f​i​c​a​t​i​o​n[]` (optional)
-- **collaborators**: `T​r​a​c​k​C​o​l​l​a​b​o​r​a​t​o​r[]` (optional)
-- **user_id**: `number`
-- **title**: `string`
-- **isrc**: `string`
-- **artistname**: `string`
-- **upc**: `string`
-- **visibility**: `string`
-- **credits**: `string`
-- **loudness_data**: `string`
-- **genre**: `string`
-- **version**: `string`
-- **versionid**: `number`
-- **length**: `number`
-- **description**: `string`
-- **release_date**: `D​a​t​e`
-- **updated_at**: `D​a​t​e`
-- **created_at**: `D​a​t​e`
-- **plays**: `number`
-- **secretcode**: `string`
-- **monetization**: `boolean`
-- **price**: `number`
-- **has_cover**: `boolean`
-- **processed**: `boolean`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| repost_user_id | `number` | No | - |
+| repost | `R​e​p​o​s​t` | No | - |
+| user | `U​s​e​r` | No | - |
+| playlists | `P​l​a​y​l​i​s​t[]` | No | - |
+| albums | `A​l​b​u​m[]` | No | - |
+| notifications | `N​o​t​i​f​i​c​a​t​i​o​n[]` | No | - |
+| collaborators | `T​r​a​c​k​C​o​l​l​a​b​o​r​a​t​o​r[]` | No | - |
+| user_id | `number` | Yes | - |
+| title | `string` | Yes | - |
+| isrc | `string` | Yes | - |
+| artistname | `string` | Yes | - |
+| upc | `string` | Yes | - |
+| visibility | `string` | Yes | - |
+| credits | `string` | Yes | - |
+| loudness_data | `string` | Yes | - |
+| genre | `string` | Yes | - |
+| version | `string` | Yes | - |
+| versionid | `number` | Yes | - |
+| length | `number` | Yes | - |
+| description | `string` | Yes | - |
+| release_date | `D​a​t​e` | Yes | - |
+| updated_at | `D​a​t​e` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
+| plays | `number` | Yes | - |
+| secretcode | `string` | Yes | - |
+| monetization | `boolean` | Yes | - |
+| price | `number` | Yes | - |
+| has_cover | `boolean` | Yes | - |
+| processed | `boolean` | Yes | - |
 

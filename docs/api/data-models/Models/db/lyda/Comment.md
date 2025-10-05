@@ -32,16 +32,18 @@ export interface Comment {
 
 ### Properties
 
-- **comments**: `C​o​m​m​e​n​t[]` (optional)
-- **user**: `U​s​e​r` (optional)
-- **track**: `T​r​a​c​k` (optional)
-- **canEdit**: `boolean` (optional)
-- **id**: `number`
-- **parent_id**: `number`
-- **track_id**: `number`
-- **user_id**: `number`
-- **content**: `string`
-- **created_at**: `D​a​t​e`
-- **potentially_harmful**: `boolean`
-- **hidden**: `boolean`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| comments | `C​o​m​m​e​n​t[]` | No | - |
+| user | `U​s​e​r` | No | - |
+| track | `T​r​a​c​k` | No | - |
+| canEdit | `boolean` | No | - |
+| id | `number` | Yes | - |
+| parent_id | `number` | Yes | - |
+| track_id | `number` | Yes | - |
+| user_id | `number` | Yes | - |
+| content | `string` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
+| potentially_harmful | `boolean` | Yes | - |
+| hidden | `boolean` | Yes | - |
 

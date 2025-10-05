@@ -24,7 +24,9 @@ export interface Library {
 
 ### Properties
 
-- **tracks**: `T​r​a​c​k[]`
-- **albums**: `A​l​b​u​m[]`
-- **playlists**: `P​l​a​y​l​i​s​t[]`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| tracks | `T​r​a​c​k[]` | Yes | - |
+| albums | `A​l​b​u​m[]` | Yes | - |
+| playlists | `P​l​a​y​l​i​s​t[]` | Yes | - |
 

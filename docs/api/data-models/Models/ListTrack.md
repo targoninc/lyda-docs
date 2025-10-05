@@ -22,7 +22,9 @@ export interface ListTrack {
 
 ### Properties
 
-- **track_id**: `number`
-- **position**: `number`
-- **track**: `T​r​a​c​k` (optional)
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| track_id | `number` | Yes | - |
+| position | `number` | Yes | - |
+| track | `T​r​a​c​k` | No | - |
 

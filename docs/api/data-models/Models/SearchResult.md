@@ -20,11 +20,13 @@ export interface SearchResult {
 
 ### Properties
 
-- **id**: `number`
-- **url**: `string`
-- **exactMatch**: `boolean`
-- **type**: `string`
-- **display**: `string`
-- **subtitle**: `string` (optional)
-- **hasImage**: `boolean` (optional)
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `number` | Yes | - |
+| url | `string` | Yes | - |
+| exactMatch | `boolean` | Yes | - |
+| type | `string` | Yes | - |
+| display | `string` | Yes | - |
+| subtitle | `string` | No | - |
+| hasImage | `boolean` | No | - |
 

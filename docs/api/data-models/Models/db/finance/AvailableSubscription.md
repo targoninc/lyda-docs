@@ -21,12 +21,14 @@ export interface AvailableSubscription {
 
 ### Properties
 
-- **id**: `number`
-- **product_id**: `number`
-- **name**: `string`
-- **description**: `string`
-- **service**: `string`
-- **plan_id**: `string`
-- **term_type**: `string`
-- **price_per_term**: `number`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `number` | Yes | - |
+| product_id | `number` | Yes | - |
+| name | `string` | Yes | - |
+| description | `string` | Yes | - |
+| service | `string` | Yes | - |
+| plan_id | `string` | Yes | - |
+| term_type | `string` | Yes | - |
+| price_per_term | `number` | Yes | - |
 

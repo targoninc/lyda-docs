@@ -23,8 +23,10 @@ export interface Repost {
 
 ### Properties
 
-- **user**: `U​s​e​r` (optional)
-- **user_id**: `number`
-- **track_id**: `number`
-- **created_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| user | `U​s​e​r` | No | - |
+| user_id | `number` | Yes | - |
+| track_id | `number` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
 

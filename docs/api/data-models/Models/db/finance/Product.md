@@ -20,11 +20,13 @@ export interface Product {
 
 ### Properties
 
-- **id**: `number`
-- **name**: `string`
-- **description**: `string`
-- **available**: `boolean`
-- **image**: `string`
-- **link**: `string`
-- **url**: `string`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `number` | Yes | - |
+| name | `string` | Yes | - |
+| description | `string` | Yes | - |
+| available | `boolean` | Yes | - |
+| image | `string` | Yes | - |
+| link | `string` | Yes | - |
+| url | `string` | Yes | - |
 

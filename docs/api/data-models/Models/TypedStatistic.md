@@ -22,6 +22,8 @@ export interface TypedStatistic {
 
 ### Properties
 
-- **type**: `A​c​t​i​v​i​t​y​T​a​b​l​e​N​a​m​e,`
-- **stats**: `S​t​a​t​i​s​t​i​c[]`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| type | `A​c​t​i​v​i​t​y​T​a​b​l​e​N​a​m​e,` | Yes | - |
+| stats | `S​t​a​t​i​s​t​i​c[]` | Yes | - |
 

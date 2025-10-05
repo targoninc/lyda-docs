@@ -16,7 +16,9 @@ export interface Badge {
 
 ### Properties
 
-- **id**: `number`
-- **name**: `string`
-- **description**: `string`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `number` | Yes | - |
+| name | `string` | Yes | - |
+| description | `string` | Yes | - |
 

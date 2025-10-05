@@ -60,36 +60,38 @@ export interface User extends Entity {
 
 ### Properties
 
-- **permissions**: `P​e​r​m​i​s​s​i​o​n[]` (optional)
-- **subscription**: `S​u​b​s​c​r​i​p​t​i​o​n` (optional)
-- **settings**: `U​s​e​r​s​e​t​t​i​n​g[]` (optional)
-- **badges**: `B​a​d​g​e[]` (optional)
-- **userBadges**: `U​s​e​r​B​a​d​g​e[]` (optional)
-- **follows**: `F​o​l​l​o​w[]` (optional)
-- **following**: `F​o​l​l​o​w[]` (optional)
-- **totp**: `U​s​e​r​T​o​t​p[]` (optional)
-- **public_keys**: `P​u​b​l​i​c​K​e​y[]` (optional)
-- **giftedSubscriptions**: `S​u​b​s​c​r​i​p​t​i​o​n[]` (optional)
-- **id**: `number`
-- **username**: `string`
-- **mfa_enabled**: `boolean`
-- **emails**: `U​s​e​r​E​m​a​i​l[]`
-- **password_hash**: `string`
-- **displayname**: `string`
-- **description**: `string`
-- **password_token**: `string|null`
-- **verified**: `boolean`
-- **verification_status**: `string`
-- **created_at**: `D​a​t​e`
-- **updated_at**: `D​a​t​e`
-- **deleted_at**: `D​a​t​e`
-- **lastlogin**: `D​a​t​e` (optional)
-- **secondlastlogin**: `D​a​t​e` (optional)
-- **password_updated_at**: `D​a​t​e`
-- **tos_agreed_at**: `D​a​t​e`
-- **ip**: `string`
-- **has_avatar**: `boolean`
-- **has_banner**: `boolean`
-- **email_mfa_code**: `string`
-- **passkey_user_id**: `string`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| permissions | `P​e​r​m​i​s​s​i​o​n[]` | No | - |
+| subscription | `S​u​b​s​c​r​i​p​t​i​o​n` | No | - |
+| settings | `U​s​e​r​s​e​t​t​i​n​g[]` | No | - |
+| badges | `B​a​d​g​e[]` | No | - |
+| userBadges | `U​s​e​r​B​a​d​g​e[]` | No | - |
+| follows | `F​o​l​l​o​w[]` | No | - |
+| following | `F​o​l​l​o​w[]` | No | - |
+| totp | `U​s​e​r​T​o​t​p[]` | No | - |
+| public_keys | `P​u​b​l​i​c​K​e​y[]` | No | - |
+| giftedSubscriptions | `S​u​b​s​c​r​i​p​t​i​o​n[]` | No | - |
+| id | `number` | Yes | - |
+| username | `string` | Yes | - |
+| mfa_enabled | `boolean` | Yes | - |
+| emails | `U​s​e​r​E​m​a​i​l[]` | Yes | - |
+| password_hash | `string` | Yes | - |
+| displayname | `string` | Yes | - |
+| description | `string` | Yes | - |
+| password_token | `string \| null` | Yes | - |
+| verified | `boolean` | Yes | - |
+| verification_status | `string` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
+| updated_at | `D​a​t​e` | Yes | - |
+| deleted_at | `D​a​t​e` | Yes | - |
+| lastlogin | `D​a​t​e` | No | - |
+| secondlastlogin | `D​a​t​e` | No | - |
+| password_updated_at | `D​a​t​e` | Yes | - |
+| tos_agreed_at | `D​a​t​e` | Yes | - |
+| ip | `string` | Yes | - |
+| has_avatar | `boolean` | Yes | - |
+| has_banner | `boolean` | Yes | - |
+| email_mfa_code | `string` | Yes | - |
+| passkey_user_id | `string` | Yes | - |
 

@@ -16,7 +16,9 @@ export interface UserBadge {
 
 ### Properties
 
-- **user_id**: `number`
-- **badge_id**: `number`
-- **given_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| user_id | `number` | Yes | - |
+| badge_id | `number` | Yes | - |
+| given_at | `D​a​t​e` | Yes | - |
 

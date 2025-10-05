@@ -20,11 +20,13 @@ export interface PaypalWebhook {
 
 ### Properties
 
-- **id**: `string`
-- **type**: `string`
-- **received_at**: `D​a​t​e`
-- **content**: `string`
-- **paypal_user_id**: `string`
-- **handled**: `boolean`
-- **updated_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `string` | Yes | - |
+| type | `string` | Yes | - |
+| received_at | `D​a​t​e` | Yes | - |
+| content | `string` | Yes | - |
+| paypal_user_id | `string` | Yes | - |
+| handled | `boolean` | Yes | - |
+| updated_at | `D​a​t​e` | Yes | - |
 

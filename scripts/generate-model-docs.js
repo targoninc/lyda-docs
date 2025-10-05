@@ -257,18 +257,23 @@ class ModelDocGenerator {
         markdown += structure.content;
         markdown += '\n```\n\n';
 
-        // Add properties table for interfaces - use plain text to avoid MDX issues
+        // Add properties table for interfaces
         if (structure.type === 'interface' && structure.properties.length > 0) {
             markdown += '### Properties\n\n';
-
+            markdown += '| Property | Type | Required | Description |\n';
+            markdown += '|----------|------|----------|-------------|\n';
             structure.properties.forEach(prop => {
-                const optional = prop.optional ? ' (optional)' : '';
-                // Escape type names to prevent MDX issues
-                const safeType = prop.type.replace(/([A-Z][a-zA-Z]*)/g, (match) => {
-                    // Add zero-width space to break JSX component detection
-                    return match.split('').join('\u200B');
-                });
-                markdown += `- **${prop.name}**: \`${safeType}\`${optional}\n`;
+                const required = prop.optional ? 'No' : 'Yes';
+                // Escape type names to prevent MDX issues - handle union types and complex expressions
+                const safeType = prop.type
+                    .split('|')
+                    .map(part => part.trim().replace(/([A-Z][a-zA-Z]*)/g, (match) => {
+                        // Add zero-width space to break JSX component detection
+                        return match.split('').join('\u200B');
+                    }))
+                    .join(' \\| ');
+                const description = prop.comment ? prop.comment.trim() : '-';
+                markdown += `| ${prop.name} | \`${safeType}\` | ${required} | ${description} |\n`;
             });
             markdown += '\n';
         }

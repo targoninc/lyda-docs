@@ -28,13 +28,15 @@ export interface Notification {
 
 ### Properties
 
-- **references**: `N​o​t​i​f​i​c​a​t​i​o​n​R​e​f​e​r​e​n​c​e[]` (optional)
-- **id**: `number`
-- **user_id**: `number`
-- **track_id**: `number`
-- **type**: `string`
-- **search_key**: `string`
-- **message**: `string`
-- **is_read**: `boolean`
-- **created_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| references | `N​o​t​i​f​i​c​a​t​i​o​n​R​e​f​e​r​e​n​c​e[]` | No | - |
+| id | `number` | Yes | - |
+| user_id | `number` | Yes | - |
+| track_id | `number` | Yes | - |
+| type | `string` | Yes | - |
+| search_key | `string` | Yes | - |
+| message | `string` | Yes | - |
+| is_read | `boolean` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
 

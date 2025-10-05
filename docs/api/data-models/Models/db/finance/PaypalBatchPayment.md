@@ -25,10 +25,12 @@ export interface PaypalBatchPayment {
 
 ### Properties
 
-- **id**: `number`
-- **paypal_batch_id**: `string`
-- **request_items_json**: `string`
-- **paypal_batch_status**: `P​a​y​p​a​l​B​a​t​c​h​S​t​a​t​u​s`
-- **created_at**: `D​a​t​e`
-- **updated_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `number` | Yes | - |
+| paypal_batch_id | `string` | Yes | - |
+| request_items_json | `string` | Yes | - |
+| paypal_batch_status | `P​a​y​p​a​l​B​a​t​c​h​S​t​a​t​u​s` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
+| updated_at | `D​a​t​e` | Yes | - |
 

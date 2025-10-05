@@ -18,9 +18,11 @@ export interface ListeningHistory {
 
 ### Properties
 
-- **id**: `number`
-- **user_id**: `number`
-- **track_id**: `number`
-- **quality**: `string`
-- **created_at**: `D​a​t​e`
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| id | `number` | Yes | - |
+| user_id | `number` | Yes | - |
+| track_id | `number` | Yes | - |
+| quality | `string` | Yes | - |
+| created_at | `D​a​t​e` | Yes | - |
 

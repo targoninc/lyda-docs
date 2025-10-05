@@ -23,8 +23,10 @@ export interface Filter {
 
 ### Properties
 
-- **key**: `string`
-- **name**: `string`
-- **type**: `I​n​p​u​t​T​y​p​e`
-- **default**: `any` (optional)
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| key | `string` | Yes | - |
+| name | `string` | Yes | - |
+| type | `I​n​p​u​t​T​y​p​e` | Yes | - |
+| default | `any` | No | - |
 

@@ -24,8 +24,10 @@ export interface PlayingFrom {
 
 ### Properties
 
-- **type**: `"album" | "playlist" | string`
-- **name**: `string`
-- **id**: `number`
-- **entity**: `A​l​b​u​m|P​l​a​y​l​i​s​t` (optional)
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| type | `"album" \| "playlist" \| string` | Yes | - |
+| name | `string` | Yes | - |
+| id | `number` | Yes | - |
+| entity | `A​l​b​u​m \| P​l​a​y​l​i​s​t` | No | - |
 
