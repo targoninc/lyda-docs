@@ -1,0 +1,39 @@
+# Genre
+
+**Source:** `lyda-shared/src/Enums/Genre.ts`
+
+## Genre
+
+**Type:** enum
+
+```typescript
+export enum Genre
+{
+    ROCK = 'rock',
+    POP = 'pop',
+    RAP = 'rap',
+    COUNTRY = 'country',
+    JAZZ = 'jazz',
+    METAL = 'metal',
+    CLASSICAL = 'classical',
+    BLUES = 'blues',
+    REGGAE = 'reggae',
+    FOLK = 'folk',
+    ELECTRONIC = 'electronic',
+    HIP_HOP = 'hip-hop',
+    SOUL = 'soul',
+    PUNK = 'punk',
+    R_AND_B = 'r&b',
+    FUNK = 'funk',
+    DISCO = 'disco',
+    HOUSE = 'house',
+    TECHNO = 'techno',
+    TRANCE = 'trance',
+    DUBSTEP = 'dubstep',
+    DANCE = 'dance',
+    INDIE = 'indie',
+    ALTERNATIVE = 'alternative',
+    OTHER = 'other',
+}
+```
+

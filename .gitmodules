@@ -1,0 +1,3 @@
+[submodule "lyda-shared"]
+	path = lyda-shared
+	url = https://github.com/targoninc/lyda-shared.git
