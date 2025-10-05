@@ -62,20 +62,20 @@ export interface User extends Entity {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| permissions | P​e​r​m​i​s​s​i​o​n[] | No | - |
-| subscription | S​u​b​s​c​r​i​p​t​i​o​n | No | - |
-| settings | U​s​e​r​s​e​t​t​i​n​g[] | No | - |
-| badges | B​a​d​g​e[] | No | - |
-| userBadges | U​s​e​r​B​a​d​g​e[] | No | - |
-| follows | F​o​l​l​o​w[] | No | - |
-| following | F​o​l​l​o​w[] | No | - |
-| totp | U​s​e​r​T​o​t​p[] | No | - |
-| public_keys | P​u​b​l​i​c​K​e​y[] | No | - |
-| giftedSubscriptions | S​u​b​s​c​r​i​p​t​i​o​n[] | No | - |
+| permissions | [Permission](./Permission)[] | No | - |
+| subscription | [Subscription](./Subscription) | No | - |
+| settings | [Usersetting](./Usersetting)[] | No | - |
+| badges | [Badge](./Badge)[] | No | - |
+| userBadges | [UserBadge](./UserBadge)[] | No | - |
+| follows | [Follow](./Follow)[] | No | - |
+| following | [Follow](./Follow)[] | No | - |
+| totp | [UserTotp](./UserTotp)[] | No | - |
+| public_keys | [PublicKey](./PublicKey)[] | No | - |
+| giftedSubscriptions | [Subscription](./Subscription)[] | No | - |
 | id | number | Yes | - |
 | username | string | Yes | - |
 | mfa_enabled | boolean | Yes | - |
-| emails | U​s​e​r​E​m​a​i​l[] | Yes | - |
+| emails | [UserEmail](./UserEmail)[] | Yes | - |
 | password_hash | string | Yes | - |
 | displayname | string | Yes | - |
 | description | string | Yes | - |

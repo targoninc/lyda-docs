@@ -38,7 +38,7 @@ export interface Subscription {
 | id | number | Yes | - |
 | user_id | number | Yes | - |
 | subscription_id | number | Yes | - |
-| status | S​u​b​s​c​r​i​p​t​i​o​n​S​t​a​t​u​s | Yes | - |
+| status | [SubscriptionStatus](./SubscriptionStatus) | Yes | - |
 | created_at | D​a​t​e | Yes | - |
 | updated_at | D​a​t​e | Yes | - |
 | cancelled_at | D​a​t​e | Yes | - |

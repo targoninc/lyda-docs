@@ -27,7 +27,7 @@ export interface AlbumTrack {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| track | T​r​a​c​k | No | - |
+| track | [Track](./Track) | No | - |
 | album_id | number | Yes | - |
 | track_id | number | Yes | - |
 | user_id | number | Yes | - |

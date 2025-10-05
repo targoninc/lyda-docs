@@ -32,5 +32,5 @@ export interface PlaylistTrack {
 | user_id | number | Yes | - |
 | position | number | Yes | - |
 | created_at | D​a​t​e | Yes | - |
-| track | T​r​a​c​k | No | - |
+| track | [Track](./Track) | No | - |
 

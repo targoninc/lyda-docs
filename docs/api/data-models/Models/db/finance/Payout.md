@@ -32,7 +32,7 @@ export interface Payout {
 | payout_batch_id | string | Yes | - |
 | user_id | number | Yes | - |
 | amount_ct | number | Yes | - |
-| status | P​a​y​m​e​n​t​S​t​a​t​u​s | Yes | - |
+| status | [PaymentStatus](./PaymentStatus) | Yes | - |
 | created_at | D​a​t​e | Yes | - |
 | updated_at | D​a​t​e | Yes | - |
 

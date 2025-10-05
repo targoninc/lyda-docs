@@ -26,5 +26,5 @@ export interface ListTrack {
 |----------|------|----------|-------------|
 | track_id | number | Yes | - |
 | position | number | Yes | - |
-| track | T​r​a​c​k | No | - |
+| track | [Track](./Track) | No | - |
 

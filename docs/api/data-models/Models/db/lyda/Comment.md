@@ -35,8 +35,8 @@ export interface Comment {
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | comments | C​o​m​m​e​n​t[] | No | - |
-| user | U​s​e​r | No | - |
-| track | T​r​a​c​k | No | - |
+| user | [User](./User) | No | - |
+| track | [Track](./Track) | No | - |
 | canEdit | boolean | No | - |
 | id | number | Yes | - |
 | parent_id | number | Yes | - |

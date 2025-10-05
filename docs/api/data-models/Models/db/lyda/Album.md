@@ -42,8 +42,8 @@ export interface Album extends Entity {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| tracks | A​l​b​u​m​T​r​a​c​k[] | No | - |
-| user | U​s​e​r | No | - |
+| tracks | [AlbumTrack](./AlbumTrack)[] | No | - |
+| user | [User](./User) | No | - |
 | id | number | Yes | - |
 | user_id | number | Yes | - |
 | title | string | Yes | - |

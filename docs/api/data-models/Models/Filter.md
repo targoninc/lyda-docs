@@ -27,6 +27,6 @@ export interface Filter {
 |----------|------|----------|-------------|
 | key | string | Yes | - |
 | name | string | Yes | - |
-| type | I​n​p​u​t​T​y​p​e | Yes | - |
+| type | [InputType](./InputType) | Yes | - |
 | default | any | No | - |
 

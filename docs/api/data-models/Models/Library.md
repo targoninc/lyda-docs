@@ -26,7 +26,7 @@ export interface Library {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| tracks | T​r​a​c​k[] | Yes | - |
-| albums | A​l​b​u​m[] | Yes | - |
-| playlists | P​l​a​y​l​i​s​t[] | Yes | - |
+| tracks | [Track](./Track)[] | Yes | - |
+| albums | [Album](./Album)[] | Yes | - |
+| playlists | [Playlist](./Playlist)[] | Yes | - |
 

@@ -42,8 +42,8 @@ export interface Playlist extends Entity {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| tracks | P​l​a​y​l​i​s​t​T​r​a​c​k[] | No | - |
-| user | U​s​e​r | No | - |
+| tracks | [PlaylistTrack](./PlaylistTrack)[] | No | - |
+| user | [User](./User) | No | - |
 | id | number | Yes | - |
 | user_id | number | Yes | - |
 | title | string | Yes | - |

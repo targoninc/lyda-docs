@@ -63,12 +63,12 @@ export interface Track extends Entity {
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | repost_user_id | number | No | - |
-| repost | R​e​p​o​s​t | No | - |
-| user | U​s​e​r | No | - |
-| playlists | P​l​a​y​l​i​s​t[] | No | - |
-| albums | A​l​b​u​m[] | No | - |
-| notifications | N​o​t​i​f​i​c​a​t​i​o​n[] | No | - |
-| collaborators | T​r​a​c​k​C​o​l​l​a​b​o​r​a​t​o​r[] | No | - |
+| repost | [Repost](./Repost) | No | - |
+| user | [User](./User) | No | - |
+| playlists | [Playlist](./Playlist)[] | No | - |
+| albums | [Album](./Album)[] | No | - |
+| notifications | [Notification](./Notification)[] | No | - |
+| collaborators | [TrackCollaborator](./TrackCollaborator)[] | No | - |
 | user_id | number | Yes | - |
 | title | string | Yes | - |
 | isrc | string | Yes | - |

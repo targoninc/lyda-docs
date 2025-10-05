@@ -23,6 +23,6 @@ export interface WebauthnVerificationRequest {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| verification | A​u​t​h​e​n​t​i​c​a​t​i​o​n​J​S​O​N | Yes | - |
+| verification | [AuthenticationJSON](./AuthenticationJSON) | Yes | - |
 | challenge | string | Yes | - |
 

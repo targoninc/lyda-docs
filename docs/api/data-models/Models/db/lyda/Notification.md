@@ -30,7 +30,7 @@ export interface Notification {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| references | N​o​t​i​f​i​c​a​t​i​o​n​R​e​f​e​r​e​n​c​e[] | No | - |
+| references | [NotificationReference](./NotificationReference)[] | No | - |
 | id | number | Yes | - |
 | user_id | number | Yes | - |
 | track_id | number | Yes | - |

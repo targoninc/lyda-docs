@@ -29,5 +29,5 @@ export interface PlayingFrom {
 | type | "album" or "playlist" or string | Yes | - |
 | name | string | Yes | - |
 | id | number | Yes | - |
-| entity | A​l​b​u​m or P​l​a​y​l​i​s​t | No | - |
+| entity | [Album](./Album) or [Playlist](./Playlist) | No | - |
 

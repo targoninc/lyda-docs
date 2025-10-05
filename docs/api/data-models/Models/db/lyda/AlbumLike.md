@@ -25,7 +25,7 @@ export interface AlbumLike {
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| user | U​s​e​r | No | - |
+| user | [User](./User) | No | - |
 | user_id | number | Yes | - |
 | album_id | number | Yes | - |
 | created_at | D​a​t​e | Yes | - |

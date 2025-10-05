@@ -119,7 +119,7 @@ class ModelDocGenerator {
 
         // Add each structure (interface, enum, type)
         parsed.structures.forEach(structure => {
-            markdown += this.generateStructureMarkdown(structure);
+            markdown += this.generateStructureMarkdown(structure, parsed.imports);
         });
 
         return markdown;
@@ -298,7 +298,7 @@ class ModelDocGenerator {
         // Process each type name found
         typeNames.forEach(typeName => {
             // Check if this type is imported
-            if (imports.some(imp => imp.includes(typeName))) {
+            if (this.isTypeImported(typeName, imports)) {
                 // Create a link to the type's documentation
                 const regex = new RegExp(`\\b${typeName}\\b`, 'g');
                 result = result.replace(regex, `[${typeName}](./${typeName})`);
@@ -311,6 +311,32 @@ class ModelDocGenerator {
         });
         
         return result;
+    }
+
+    /**
+     * Check if a type is imported
+     */
+    isTypeImported(typeName, imports) {
+        return imports.some(imp => {
+            // Handle different import patterns
+            // import {User} from "./User.js"
+            // import {User, Album} from "./models.js"
+            // import User from "./User.js"
+            const importMatch = imp.match(/import\s+(?:\{([^}]*)\}|(\w+))\s+from/);
+            if (importMatch) {
+                const namedImports = importMatch[1];
+                const defaultImport = importMatch[2];
+                
+                if (namedImports) {
+                    // Check named imports
+                    return namedImports.split(',').some(name => name.trim() === typeName);
+                } else if (defaultImport) {
+                    // Check default import
+                    return defaultImport.trim() === typeName;
+                }
+            }
+            return false;
+        });
     }
 
     /**
