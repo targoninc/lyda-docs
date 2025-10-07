@@ -10,6 +10,8 @@ import {Track} from "./db/lyda/Track.ts";
 
 ## ListTrack
 
+A generic interface for tracks in lists (e.g. albums or playlists)
+
 **Type:** interface
 
 ```typescript

@@ -4,6 +4,8 @@
 
 ## NotificationReferenceType
 
+Represents the different types of notification references. These are actually stored in the message.
+
 **Type:** enum
 
 ```typescript

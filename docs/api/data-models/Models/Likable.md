@@ -12,6 +12,8 @@ import {PlaylistLike} from "./db/lyda/PlaylistLike.ts";
 
 ## Likable
 
+A generic interface for an entity that has an array of likes attached to it
+
 **Type:** interface
 
 ```typescript

@@ -11,6 +11,8 @@ import {Playlist} from "./db/lyda/Playlist.ts";
 
 ## PlayingFrom
 
+Represents the source from where media is currently being played.
+
 **Type:** interface
 
 ```typescript
