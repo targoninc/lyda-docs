@@ -23,6 +23,6 @@ While we encourage developers to write tools to better make use of the platform,
 
 We don't want to rely on the community to make the platform usable and want to engage in active discourse with you to make sure the platform truly benefits everyone.
 
-## Getting started
-
 We recommend first taking a look at our [Data models](/api/data-models) or checking out some general [terms](/terms/isrc) related to Lyda.
+
+Want to work on the app itself? Start with the [development guide](/development).
