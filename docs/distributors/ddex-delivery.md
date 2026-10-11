@@ -78,4 +78,24 @@ names, P/C lines, territories, commercial models and use types are recorded on t
 dashboard. Contributors are stored on the track (credits) and linked to Lyda accounts when the party name matches a
 user.
 
+### Artist accounts and approvals
+
+Each artist on a release is resolved to a Lyda account by display name or username, and the primary artist (the first
+`DisplayArtist`) owns the delivered album and tracks. Artists without an account get one auto-created and flagged as
+DDEX-created; that flag is visible on the account.
+
+- Content delivered to a DDEX-created account (or to the delivering account itself) is approved automatically and
+  appears on the artist's profile right away.
+- Content delivered to an existing account starts as `pending`. It is hidden from the artist's profile until they
+  approve it, either per track or per album (`GET /deliveries/pending`, then
+  `POST /deliveries/actions/approve` or `/deny`). Approving an album also approves its tracks.
+- Additional artists are linked as collaborators through the collaboration system. Existing accounts get a pending
+  collaboration they can approve or deny (`GET /albums/unapprovedCollabs`,
+  `POST /albums/actions/approveCollab` / `denyCollab`); auto-created accounts are approved automatically.
+
+### Provenance
+
+Every delivered album and track stores the exact delivery it came from (`ddex_delivery_id`), so content can always be
+traced back through `lyda.ddex_deliveries` to the delivery message and partner that delivered it.
+
 Deliveries are logged and visible to Lyda staff in the deliveries tab of the internal dashboard.
