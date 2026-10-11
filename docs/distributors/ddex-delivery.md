@@ -99,4 +99,19 @@ Every delivered album, track and auto-created artist account stores the exact de
 (`ddex_delivery_id`), so content can always be traced back through `lyda.ddex_deliveries` to the delivery message and
 partner that delivered it.
 
+## Royalty reporting
+
+DDEX-delivered tracks are not paid out to the artist account. Monthly royalty calculation still produces per-track
+royalties as usual, but only tracks without a delivery (`ddex_delivery_id IS NULL`) are aggregated into artist
+payouts. The share belonging to delivered tracks is reported back to the delivering partner instead.
+
+When royalties are calculated for a month, Lyda generates one DDEX sales report
+(`SalesReportToRecordCompanyMessage`, DSR 4.3) per delivering partner, covering that partner's track royalties for
+the period: usage (streams and downloads), per-track transactions with ISRC/resource references, and the total
+royalty amount. Recalculating a month regenerates the reports.
+
+Reports are stored and shown in the royalty management tab of the internal dashboard, and can be fetched via
+`GET /royalties/ddex/reports` (JSON list) and `GET /royalties/ddex/reports/xml?id=` (XML download).
+`POST /royalties/ddex/reports/generate` with `{year, month}` regenerates them on demand.
+
 Deliveries are logged and visible to Lyda staff in the deliveries tab of the internal dashboard.
