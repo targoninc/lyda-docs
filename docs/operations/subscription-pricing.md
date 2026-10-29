@@ -6,7 +6,8 @@ way to change `finance.available_subscriptions.price_per_term`.
 
 ## Flow
 
-1. An admin enters a new price for one plan and requests the change.
+1. An admin enters a new price for one plan, chooses a future effective date,
+   and requests the change. Dates in the past are rejected.
 2. The API creates a `finance.subscription_price_changes` row and emails an
    approval link. The link contains a single-use, expiring token. Only its
    SHA-256 hash is stored.
@@ -15,18 +16,27 @@ way to change `finance.available_subscriptions.price_per_term`.
    apply that arrives before the countdown has elapsed.
 4. Confirming claims the request and clears the token. The request can no longer
    be approved or cancelled.
-5. The DB price is updated and, for Stripe plans, a new managed Stripe price is
-   created and the previous price is deactivated. Checkout reads the new
-   `plan_id`/`price_per_term` immediately.
-6. Every active subscriber of that plan receives an in-app notification and an
-   email. Price-change notifications are mandatory and cannot be disabled.
-7. Every step is recorded in `lyda.action_log`, including requester, approver,
-   old/new price, provider result and errors.
+5. A new row is written to `finance.subscription_price_history` with the
+   effective date. For Stripe, a new managed Price is created but checkout keeps
+   using the old price until the effective date. For Apple, the App Store price
+   change is scheduled with the same start date.
+6. A scheduler applies due history rows to
+   `finance.available_subscriptions.price_per_term` and `plan_id`. Until then,
+   current plan reads ignore the future row and continue serving the old price.
+7. Every active subscriber of that plan receives an in-app notification and an
+   email. Price-change notifications are mandatory and cannot be disabled. The
+   notification includes the effective date.
+8. Every step is recorded in `lyda.action_log`, including requester, approver,
+   old/new price, effective date, provider result and errors.
 
 Existing Stripe subscriptions are not repriced by this flow. The current policy
 is that existing subscribers keep their existing price; the notification email
 states this explicitly. Revisit this policy if prices should apply immediately
 or at the next renewal.
+
+`finance.subscription_price_history` is the price timeline. A baseline row is
+created for every plan and each approved change appends a new dated row. The
+dashboard shows this history alongside pending change requests.
 
 ## Apple App Store
 
@@ -68,7 +78,10 @@ available App Store price point in the base territory.
 - Approval links expire after 24 hours.
 - A plan can have only one open request at a time.
 - The request is rejected if the plan price changed after the request was made.
-- Stripe prices are immutable; updating a price creates a new Price object.
+- Stripe prices are immutable; updating a price creates a new Price object. The
+  old Price remains active until the scheduled price takes effect.
+- Changing a plan can be scheduled only for a future date. The API applies due
+  history rows on startup and once per minute while running.
 - Apple applies price changes per territory. A partial Apple failure is recorded
   in the request and may require reconciling the affected territory in App Store
   Connect.
