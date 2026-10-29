@@ -18,9 +18,8 @@ way to change `finance.available_subscriptions.price_per_term`.
 5. The DB price is updated and, for Stripe plans, a new managed Stripe price is
    created and the previous price is deactivated. Checkout reads the new
    `plan_id`/`price_per_term` immediately.
-6. Active subscribers of that plan receive an in-app notification. They receive
-   an email unless they explicitly disabled
-   `notification_subscription_price_change`.
+6. Every active subscriber of that plan receives an in-app notification and an
+   email. Price-change notifications are mandatory and cannot be disabled.
 7. Every step is recorded in `lyda.action_log`, including requester, approver,
    old/new price, provider result and errors.
 
@@ -31,23 +30,38 @@ or at the next renewal.
 
 ## Apple App Store
 
-Apple prices cannot be changed through the current backend credentials. A
-request for an Apple plan moves to `pending_apple` after approval. The DB price
-is not changed and subscribers are not notified yet.
+Apple price changes are automated through the App Store Connect API when these
+credentials are configured:
 
-An admin completes the following manual steps:
+- `APPLE_APP_STORE_CONNECT_KEY_ID`
+- `APPLE_APP_STORE_CONNECT_ISSUER_ID`
+- `APPLE_APP_STORE_CONNECT_PRIVATE_KEY`
+- `APPLE_APP_STORE_CONNECT_APP_ID` (falls back to `APPLE_APP_ID`)
+
+The API key must belong to a user with the Admin or App Manager role. This is a
+different key type from the App Store Server API key.
+
+Approval resolves the subscription by `plan_id`/product ID, finds the App Store
+price point matching the requested USD amount in the base territory, resolves
+equalizations, and schedules a `subscriptionPrices` change per configured
+territory. The default is `USA`; set
+`APPLE_APP_STORE_CONNECT_TERRITORIES=*` to use every equalized territory, or
+provide a comma-separated list. Existing subscribers are preserved via
+`preserveCurrentPrice`.
+
+If the App Store Connect credentials are absent, the request falls back to
+`pending_apple` and the manual checklist remains available:
 
 1. Open App Store Connect and select the Lyda app.
 2. Open the subscription group and select the matching Apple product.
-3. Set the same price point as the approved request, in the matching storefront
-   base territory, and wait for the change to become active.
+3. Set the same price point as the approved request and wait for the change to
+   become active.
 4. Return to **Subscription pricing** in the internal dashboard, open the
    pending request and click **Apple steps complete**.
 
-That final confirmation updates the DB and sends the subscriber notifications.
-If Apple later supports programmatic price-point changes for the configured
-account, the manual step can be replaced by an API call in
-`SubscriptionPriceChangeService.confirmAppleSteps`.
+The final manual confirmation updates the DB and sends subscriber notifications.
+Apple price points are a fixed ladder, so the requested amount must match an
+available App Store price point in the base territory.
 
 ## Operational notes
 
@@ -55,6 +69,9 @@ account, the manual step can be replaced by an API call in
 - A plan can have only one open request at a time.
 - The request is rejected if the plan price changed after the request was made.
 - Stripe prices are immutable; updating a price creates a new Price object.
+- Apple applies price changes per territory. A partial Apple failure is recorded
+  in the request and may require reconciling the affected territory in App Store
+  Connect.
 - Emails are sent sequentially to keep provider rate limits predictable.
 - If email delivery for the approval fails, the request is marked failed and a
   new request must be created.
