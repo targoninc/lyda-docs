@@ -14,3 +14,16 @@ If that works, the issue might be with analyzing the loudness data of the file:
 ```bash
 ffmpeg -i %file% -af ebur128
 ```
+
+
+## Object storage CORS
+
+Audio is normally served directly from S3 through short-lived signed URLs. The
+storage bucket must allow the web origins with `GET`/`HEAD`, `Range` headers and
+the content/range response headers.
+
+The API applies this bucket CORS rule on startup from `CORS_ORIGIN`; set
+`S3_CORS_ORIGINS` only when the bucket origins differ from the API's CORS
+origins. The S3 credentials need permission to update the bucket CORS
+configuration. If the rule cannot be applied, signed audio playback fails with a
+browser CORS error until the bucket is configured manually.
